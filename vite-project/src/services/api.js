@@ -14,8 +14,6 @@ export const initializeDatabase = async () => {
 export const getTransactions = async (month, page, perPage, search) => {
   try {
     console.log("serachhhhh",search)
-    // const res=await axios.get(`${API_URL}/transactions`, { params: { month, page, perPage, search } });
-    // console.log("resssssss",res)
     return await axios.get(`${API_URL}/transactions`, { params: { month, page, perPage, search } });
   } catch (error) {
     console.error("Error fetching transactions: from=====", error);
